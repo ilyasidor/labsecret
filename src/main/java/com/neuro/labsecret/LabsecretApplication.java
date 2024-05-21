@@ -19,8 +19,5 @@ public class LabsecretApplication {
         List<MedCard> medCards = parserExcel.initMedСards("Карточка мед.организации.xlsx");
         List<Standards> standardsList  = parserExcel.standardsList("Нормативы.xlsx");
         List<Timetable> timetableList = parserExcel.initializeTimetable("Карточка мед.организации.xlsx");
-        for(Timetable data:timetableList){
-            System.out.println(data);
-        }
     }
 }
