@@ -1,4 +1,4 @@
-package pojos;
+package tables;
 
 import lombok.Data;
 

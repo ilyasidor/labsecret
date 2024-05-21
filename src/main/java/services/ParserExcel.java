@@ -4,10 +4,10 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
-import pojos.DevelopersData;
-import pojos.MedCard;
-import pojos.Standards;
-import pojos.Timetable;
+import tables.DevelopersData;
+import tables.MedCard;
+import tables.Standards;
+import tables.Timetable;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,9 +16,9 @@ import java.util.List;
 
 public class ParserExcel {
 
-    public List<DevelopersData> developersDataList(String addresToExel) throws IOException {
+    public static List<DevelopersData> initializeDevelopers(String pathToExcelFile) throws IOException {
         List<DevelopersData> developersDataList = new ArrayList<>();
-        Workbook workbook = WorkbookFactory.create(new File(addresToExel));
+        Workbook workbook = WorkbookFactory.create(new File(pathToExcelFile));
         Sheet sheet = workbook.getSheetAt(0);
         for (Row row : sheet) {
             if(row.getRowNum()!=0){
@@ -37,9 +37,9 @@ public class ParserExcel {
         workbook.close();
         return developersDataList;
     }
-    public List<MedCard> initMedСards(String addressToExel) throws IOException {
+    public static List<MedCard> initializeCards(String pathToExcelFile) throws IOException {
         List<MedCard> medCards = new ArrayList<>();
-        Workbook workbook = WorkbookFactory.create(new File(addressToExel));
+        Workbook workbook = WorkbookFactory.create(new File(pathToExcelFile));
         Sheet sheet = workbook.getSheetAt(0);
         for (Row row : sheet) {
             if(row.getRowNum()!=0){
@@ -82,9 +82,9 @@ public class ParserExcel {
         workbook.close();
         return medCards;
     }
-    public List<Standards> standardsList(String addresToExel) throws IOException {
+    public static List<Standards> initializeStandard(String pathToExcelFile) throws IOException {
         List<Standards> standardsList = new ArrayList<>();
-        Workbook workbook = WorkbookFactory.create(new File(addresToExel));
+        Workbook workbook = WorkbookFactory.create(new File(pathToExcelFile));
         Sheet sheet = workbook.getSheetAt(0);
         for (Row row : sheet) {
             if(row.getRowNum()!=0){
@@ -102,7 +102,7 @@ public class ParserExcel {
         workbook.close();
         return standardsList;
     }
-    public List<Timetable> initializeTimetable(String pathToExcelFile) throws IOException {
+    public static List<Timetable> initializeTimetable(String pathToExcelFile) throws IOException {
         List<Timetable> timetables = new ArrayList<>();
         Workbook workbook = WorkbookFactory.create(new File(pathToExcelFile));
         Sheet sheet = workbook.getSheetAt(1);
