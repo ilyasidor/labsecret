@@ -1,0 +1,7 @@
+spring:
+  application:
+    name:
+      labsecret
+server:
+  port:
+    8089
