@@ -1,4 +1,4 @@
-package com.neuro.labsecret;
+package services;
 
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ParserExel {
+public class ParserExcel {
 
     public List<DevelopersData> developersDataList(String addresToExel) throws IOException {
         List<DevelopersData> developersDataList = new ArrayList<>();
