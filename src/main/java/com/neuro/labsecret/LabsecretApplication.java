@@ -1,12 +1,12 @@
 package com.neuro.labsecret;
 
-import org.apache.poi.ss.usermodel.*;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import pojos.DevelopersData;
+import pojos.MedCard;
+import pojos.Standards;
+import pojos.Timetable;
 
-import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootApplication

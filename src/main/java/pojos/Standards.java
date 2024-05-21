@@ -1,4 +1,4 @@
-package com.neuro.labsecret;
+package pojos;
 
 import lombok.Data;
 
